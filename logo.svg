@@ -1,36 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="ViaVeritasVita">
-  <!-- Dois V entrelaçados embaixo (o caminho) e um V invertido em cima,
-       com articulação no vértice (o compasso). Traço vazado, como na
-       referência: faixa metálica com o miolo na cor do fundo. -->
+  <!-- Três V: dois formam o W (o pico do meio é o compasso) e o
+       terceiro desce pelo centro, entrelaçado. Traço cheio em metal
+       dourado → prata → violeta; topos cortados retos na mesma linha;
+       as formas se fundem, como no esboço. -->
   <defs>
-    <linearGradient id="vvv-metal" gradientUnits="userSpaceOnUse" x1="22" y1="40" x2="178" y2="170">
-      <stop offset="0" stop-color="#b8925a"/>
-      <stop offset="0.28" stop-color="#f1d58e"/>
-      <stop offset="0.5" stop-color="#e9ebef"/>
-      <stop offset="0.7" stop-color="#a7b4f0"/>
+    <linearGradient id="vvv-metal" gradientUnits="userSpaceOnUse" x1="10" y1="36" x2="190" y2="186">
+      <stop offset="0" stop-color="#c39b5e"/>
+      <stop offset="0.3" stop-color="#f1d58e"/>
+      <stop offset="0.52" stop-color="#eceef2"/>
+      <stop offset="0.74" stop-color="#a7b4f0"/>
       <stop offset="1" stop-color="#6d5fe0"/>
     </linearGradient>
+    <clipPath id="vvv-topo"><rect x="0" y="36" width="200" height="164"/></clipPath>
     <filter id="vvv-brilho" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="5"/>
+      <feGaussianBlur stdDeviation="6"/>
     </filter>
   </defs>
-  <g fill="none" stroke-linejoin="miter" stroke-miterlimit="10">
+  <g fill="none" stroke-linejoin="miter" stroke-miterlimit="6" stroke-linecap="butt" clip-path="url(#vvv-topo)">
     <!-- brilho difuso -->
-    <g stroke="url(#vvv-metal)" stroke-width="12" opacity="0.45" filter="url(#vvv-brilho)">
-      <path d="M24 88 L66 170 L108 88"/>
-      <path d="M92 88 L134 170 L176 88"/>
-      <path d="M100 30 L58 140 M100 30 L142 140"/>
+    <g stroke="url(#vvv-metal)" stroke-width="16" opacity="0.4" filter="url(#vvv-brilho)">
+      <path d="M9 22 L58 150 L100 56 L142 150 L191 22"/>
+      <path d="M70 22 L100 150 L130 22"/>
     </g>
-    <!-- V da esquerda -->
-    <path d="M24 88 L66 170 L108 88" stroke="url(#vvv-metal)" stroke-width="13"/>
-    <path d="M24 88 L66 170 L108 88" stroke="#0b1426" stroke-width="5"/>
-    <!-- V da direita (passa por cima do primeiro) -->
-    <path d="M92 88 L134 170 L176 88" stroke="url(#vvv-metal)" stroke-width="13"/>
-    <path d="M92 88 L134 170 L176 88" stroke="#0b1426" stroke-width="5"/>
-    <!-- compasso por cima -->
-    <path d="M100 30 L58 140 M100 30 L142 140" stroke="url(#vvv-metal)" stroke-width="13"/>
-    <path d="M100 30 L58 140 M100 30 L142 140" stroke="#0b1426" stroke-width="5"/>
-    <circle cx="100" cy="30" r="11" fill="url(#vvv-metal)"/>
-    <circle cx="100" cy="30" r="4.4" fill="#0b1426"/>
+    <!-- W (dois V; o pico central é o compasso) -->
+    <path d="M9 22 L58 150 L100 56 L142 150 L191 22" stroke="url(#vvv-metal)" stroke-width="16"/>
+    <!-- V central -->
+    <path d="M70 22 L100 150 L130 22" stroke="url(#vvv-metal)" stroke-width="16"/>
   </g>
 </svg>
