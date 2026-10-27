@@ -20,11 +20,11 @@
     <!-- brilho difuso -->
     <g stroke="url(#vvv-metal)" stroke-width="16" opacity="0.4" filter="url(#vvv-brilho)">
       <path d="M9 22 L58 150 L100 56 L142 150 L191 22"/>
-      <path d="M70 22 L100 150 L130 22"/>
+      <path d="M60 22 L100 146 L140 22"/>
     </g>
     <!-- W (dois V; o pico central é o compasso) -->
     <path d="M9 22 L58 150 L100 56 L142 150 L191 22" stroke="url(#vvv-metal)" stroke-width="16"/>
     <!-- V central -->
-    <path d="M70 22 L100 150 L130 22" stroke="url(#vvv-metal)" stroke-width="16"/>
+    <path d="M60 22 L100 146 L140 22" stroke="url(#vvv-metal)" stroke-width="16"/>
   </g>
 </svg>
