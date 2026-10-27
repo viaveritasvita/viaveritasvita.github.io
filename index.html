@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>ViaVeritasVita — tecnologia a serviço da Arte Real</title>
+  <meta name="description" content="Sites de eventos, ágape com Pix, painel da tesouraria, secretaria digital e acervo de rituais, sob medida para Lojas, Capítulos, Conselhos e Grandes Corpos.">
+  <meta name="theme-color" content="#0b1426">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <meta property="og:title" content="ViaVeritasVita — tecnologia a serviço da Arte Real">
+  <meta property="og:description" content="Eventos, ágape com Pix, tesouraria, secretaria e rituais, sob medida para o seu Corpo.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://viaveritasvita.github.io/">
+  <meta property="og:image" content="https://viaveritasvita.github.io/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --ink: #0b1426;
+      --ink-2: #101c33;
+      --ink-3: #16264a;
+      --violet: #8f86ee;
+      --silver: #e4e7ec;
+      --ivory: #faf7f0;
+      --paper: #ffffff;
+      --text: #1b2233;
+      --text-soft: #4a5468;
+      --gold: #c9a24b;
+      --gold-bright: #e6cd94;
+      --gold-text: #8a6828;
+      --gold-line: rgba(201, 162, 75, 0.38);
+      --cream: #eee7d6;
+      --cream-dim: #b6bccb;
+      --whats: #1f8f4e;
+      --display: 'Cinzel', 'Times New Roman', serif;
+      --body: 'Source Serif 4', Georgia, serif;
+      --maxw: 68rem;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--ivory); color: var(--text); font-family: var(--body); font-size: 1.08rem; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    a { color: inherit; }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 1.25rem; }
+
+    /* ---------- topo escuro ---------- */
+    .hero {
+      position: relative; overflow: hidden; color: var(--cream); text-align: center;
+      background:
+        radial-gradient(40rem 24rem at 50% 16%, rgba(143, 134, 238, 0.14), transparent 70%),
+        radial-gradient(30rem 18rem at 42% 10%, rgba(201, 162, 75, 0.16), transparent 70%),
+        linear-gradient(180deg, var(--ink-3), var(--ink) 70%);
+      padding: 4.5rem 0 5rem;
+      border-bottom: 1px solid var(--gold-line);
+    }
+    .hero::before {
+      /* malha de linhas finas, como um traçado de prancheta */
+      content: ''; position: absolute; inset: 0; opacity: 0.09; pointer-events: none;
+      background-image:
+        linear-gradient(var(--gold) 1px, transparent 1px),
+        linear-gradient(90deg, var(--gold) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: radial-gradient(circle at 50% 35%, #000 0, transparent 70%);
+    }
+    .emblema { display: block; width: 150px; height: 150px; margin: 0 auto 1rem; position: relative; filter: drop-shadow(0 10px 30px rgba(143, 134, 238, 0.25)); }
+    .marca { margin: 0; font-family: var(--display); font-weight: 700; font-size: clamp(2.1rem, 7vw, 3.6rem); letter-spacing: 0.08em; position: relative;
+      background: linear-gradient(90deg, #d9b56a, #f1d58e 35%, var(--silver) 55%, #a7b4f0 75%, var(--violet));
+      -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .lema { margin: 0.3rem 0 0; font-family: var(--display); font-size: 0.82rem; letter-spacing: 0.42em; text-indent: 0.42em; text-transform: uppercase; color: var(--gold); position: relative; }
+    .lema small { display: block; margin-top: 0.3rem; font-family: var(--body); font-style: italic; letter-spacing: 0.02em; text-indent: 0; text-transform: none; font-size: 0.95rem; color: var(--cream-dim); }
+    .titulo { margin: 2.2rem auto 0.9rem; max-width: 40rem; font-family: var(--display); font-weight: 600; font-size: clamp(1.5rem, 4.6vw, 2.4rem); line-height: 1.2; color: #fff; position: relative; text-wrap: balance; }
+    .sub { margin: 0 auto; max-width: 38rem; color: var(--cream); font-size: 1.12rem; position: relative; text-wrap: pretty; }
+    .acoes { display: flex; flex-wrap: wrap; gap: 0.7rem; justify-content: center; margin-top: 2rem; position: relative; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.55rem; min-height: 52px; padding: 0 1.5rem;
+      border-radius: 999px; text-decoration: none; cursor: pointer;
+      font-family: var(--display); font-weight: 700; font-size: 0.84rem; letter-spacing: 0.1em; text-transform: uppercase;
+      border: 1px solid transparent; transition: transform 0.15s, background 0.2s;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn svg { width: 1.2rem; height: 1.2rem; }
+    .btn-whats { background: var(--whats); color: #fff; }
+    .btn-whats:hover { background: #17733e; }
+    .btn-gold { background: var(--gold); color: var(--ink); }
+    .btn-gold:hover { background: var(--gold-bright); }
+    .btn-ghost { color: var(--gold-bright); border-color: var(--gold-line); background: transparent; }
+    .btn-ghost:hover { background: rgba(201, 162, 75, 0.1); }
+    .btn[hidden] { display: none; }
+
+    /* ---------- seções claras ---------- */
+    section { padding: 4.2rem 0; }
+    .sec-head { text-align: center; max-width: 40rem; margin: 0 auto 2.4rem; }
+    .sec-head .kicker { font-family: var(--display); font-size: 0.74rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold-text); }
+    .sec-head h2 { margin: 0.4rem 0 0.5rem; font-family: var(--display); font-weight: 600; font-size: clamp(1.4rem, 4vw, 2rem); color: var(--ink); text-wrap: balance; }
+    .sec-head p { margin: 0; color: var(--text-soft); }
+
+    .cards { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); }
+    .card {
+      background: var(--paper); border: 1px solid rgba(138, 104, 40, 0.22); border-radius: 14px; padding: 1.4rem 1.35rem;
+      box-shadow: 0 6px 18px rgba(11, 20, 38, 0.06);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(11, 20, 38, 0.1); }
+    .card .ic { width: 2.6rem; height: 2.6rem; color: var(--gold-text); margin-bottom: 0.7rem; }
+    .card h3 { margin: 0 0 0.35rem; font-family: var(--display); font-weight: 600; font-size: 1.06rem; letter-spacing: 0.03em; color: var(--ink); }
+    .card p { margin: 0; color: var(--text-soft); font-size: 1rem; }
+
+    .passos { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); counter-reset: passo; }
+    .passo { position: relative; padding: 1.3rem 1.3rem 1.3rem 4.2rem; border-left: 1px solid var(--gold-line); }
+    .passo::before {
+      counter-increment: passo; content: counter(passo);
+      position: absolute; left: 1.1rem; top: 1.1rem; width: 2.3rem; height: 2.3rem; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--display); font-weight: 700; color: var(--gold-bright); background: var(--ink);
+      box-shadow: 0 0 0 3px var(--ivory), 0 0 0 4px var(--gold-line);
+    }
+    .passo h3 { margin: 0 0 0.25rem; font-family: var(--display); font-weight: 600; font-size: 1.02rem; color: var(--ink); }
+    .passo p { margin: 0; color: var(--text-soft); font-size: 1rem; }
+
+    .frase {
+      background: var(--ink); color: var(--cream); text-align: center; padding: 3.6rem 0;
+      border-top: 1px solid var(--gold-line); border-bottom: 1px solid var(--gold-line);
+    }
+    .frase blockquote { margin: 0 auto; max-width: 42rem; font-family: var(--display); font-weight: 500; font-size: clamp(1.2rem, 3.6vw, 1.7rem); line-height: 1.4; color: #fff; text-wrap: balance; }
+    .frase blockquote em { font-style: normal; color: var(--gold-bright); }
+
+    .contato { text-align: center; }
+    .contato .card { max-width: 34rem; margin: 0 auto; padding: 2rem 1.6rem; }
+    .contato .quem { margin: 0 0 0.2rem; font-family: var(--display); font-weight: 600; font-size: 1.2rem; color: var(--ink); }
+    .contato .papel { margin: 0 0 1.3rem; color: var(--text-soft); }
+    .contato .acoes { margin-top: 0; }
+    .contato .btn-ghost { color: var(--gold-text); border-color: rgba(138, 104, 40, 0.4); }
+    .contato .btn-ghost:hover { background: rgba(138, 104, 40, 0.08); }
+    .discreto { margin: 1.2rem 0 0; font-size: 0.92rem; color: var(--text-soft); }
+
+    footer { background: var(--ink); color: var(--cream-dim); text-align: center; padding: 2rem 0 2.4rem; font-size: 0.9rem; }
+    footer .f-marca { font-family: var(--display); letter-spacing: 0.3em; color: var(--gold); }
+
+    /* entrada suave ao rolar */
+    .surge { opacity: 0; transform: translateY(14px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .surge.on { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .surge { opacity: 1; transform: none; transition: none; }
+      .card, .btn { transition: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ TOPO ============ -->
+  <header class="hero">
+    <div class="wrap">
+      <img class="emblema" src="logo.svg" width="150" height="150" alt="">
+      <h1 class="marca">ViaVeritasVita</h1>
+      <p class="lema">Via · Veritas · Vita<small>o Caminho, a Verdade e a Vida</small></p>
+
+      <p class="titulo">Tecnologia a serviço da Arte Real.</p>
+      <p class="sub">
+        Sites de eventos, ágape com Pix, tesouraria, secretaria e rituais,
+        feitos sob medida para a sua Loja, Capítulo, Conselho ou Grande Corpo.
+        Menos papel e planilha solta, mais tempo para o que importa: os trabalhos.
+      </p>
+      <div class="acoes">
+        <a class="btn btn-gold" href="#contato" data-revelar>Fale comigo</a>
+        <a class="btn btn-ghost" href="#oque">Ver o que fazemos</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ O QUE FAZEMOS ============ -->
+    <section id="oque">
+      <div class="wrap">
+        <header class="sec-head surge">
+          <span class="kicker">O que fazemos</span>
+          <h2>Ferramentas à altura da tradição</h2>
+          <p>Cada projeto nasce com a identidade do seu Corpo: brasão, cores e linguagem.</p>
+        </header>
+        <div class="cards">
+          <article class="card surge">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="16" rx="2"/><path d="M3.5 9.5h17M8 2.5v4M16 2.5v4M7.5 13.5h3M7.5 17h6"/></svg>
+            <h3>Jornadas e eventos</h3>
+            <p>Programação no celular, com "agora" e "a seguir", agenda e avisos. Abre pelo QR do crachá e funciona até sem sinal no templo.</p>
+          </article>
+          <article class="card surge">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3v5a2.5 2.5 0 0 0 5 0V3M7.5 3v18M17.2 3c-1.9 1.6-2.9 3.9-2.9 6.2 0 1.9 1.2 3.2 2.9 3.2V21"/></svg>
+            <h3>Ágape e inscrições com Pix</h3>
+            <p>O irmão escolhe, o valor sai na hora e o QR do Pix já vem preenchido. Centavos de identificação e envio do comprovante facilitam a conferência.</p>
+          </article>
+          <article class="card surge">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
+            <h3>Painel da tesouraria</h3>
+            <p>Quem pagou, quem falta, quantas refeições pedir ao buffet. Tudo numa planilha viva, com painel protegido por senha.</p>
+          </article>
+          <article class="card surge">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M8.5 13h7M8.5 16.5h5"/></svg>
+            <h3>Secretaria digital</h3>
+            <p>Atas, circulares, nominatas e controle de documentos organizados, com modelos padronizados e nada perdido em conversa de grupo.</p>
+          </article>
+          <article class="card surge">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2.5zM6 19h13v2H6"/><path d="M9 7h6M9 10.5h4"/></svg>
+            <h3>Rituais e acervo</h3>
+            <p>Rituais revisados e diagramados, guias de paramentos e certificados, com a fidelidade que a ritualística exige.</p>
+          </article>
+          <article class="card surge">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 6.5l1.6 3.4 3.7.5-2.7 2.6.7 3.7L12 15l-3.3 1.7.7-3.7-2.7-2.6 3.7-.5z"/></svg>
+            <h3>Identidade visual</h3>
+            <p>Brasões tratados, miniaturas para o WhatsApp, crachás com QR e artes que valorizam o seu Corpo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FRASE ============ -->
+    <div class="frase">
+      <div class="wrap">
+        <blockquote class="surge">A tradição se preserva com zelo.<br><em>A organização, com boas ferramentas.</em></blockquote>
+      </div>
+    </div>
+
+    <!-- ============ COMO FUNCIONA ============ -->
+    <section>
+      <div class="wrap">
+        <header class="sec-head surge">
+          <span class="kicker">Como funciona</span>
+          <h2>Do pedido ao link na mão dos irmãos</h2>
+        </header>
+        <div class="passos">
+          <div class="passo surge"><h3>Você conta o que precisa</h3><p>Uma conversa rápida: o evento, a sessão, o problema da tesouraria ou da secretaria.</p></div>
+          <div class="passo surge"><h3>Montamos com a sua identidade</h3><p>Brasão, cores e textos do seu Corpo. Você revisa antes de ir ao ar.</p></div>
+          <div class="passo surge"><h3>Os irmãos acessam e usam</h3><p>Um link ou um QR. Sem instalar nada, no celular de qualquer irmão.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTATO ============ -->
+    <section class="contato" id="contato">
+      <div class="wrap">
+        <header class="sec-head surge">
+          <span class="kicker">Contato</span>
+          <h2>Vamos conversar?</h2>
+          <p>Se a sua Loja, Capítulo ou Conselho tem um evento pela frente, ou uma tarefa que toma tempo demais, fale comigo.</p>
+        </header>
+        <div class="card surge">
+          <p class="quem">Ir. Rogério Toledo</p>
+          <p class="papel">ViaVeritasVita · estrutura de apoio à Maçonaria</p>
+          <div class="acoes">
+            <button type="button" class="btn btn-gold" id="btnRevelar" data-revelar>Mostrar contato</button>
+          </div>
+          <div class="acoes" id="contatos" hidden>
+            <a class="btn btn-whats" id="cWhats" href="#" target="_blank" rel="noopener">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1.4A6.6 6.6 0 0 0 2.3 11l-.9 3.4 3.5-.9A6.6 6.6 0 1 0 8 1.4zm3.5 9.2c-.2.5-1 .9-1.4.9-.4.1-.8.1-1.3-.1a10 10 0 0 1-2.1-1A8.2 8.2 0 0 1 4.4 8c-.3-.6-.5-1.2-.4-1.8.1-.5.4-.9.7-1.1.2-.2.5-.2.7-.1l.5 1.1c.1.2.1.4 0 .6l-.4.5c-.1.2-.1.3 0 .5.2.4.7 1 1.2 1.4.5.4 1 .7 1.5.9.2.1.3 0 .4-.1l.5-.6c.2-.2.4-.2.6-.1l1.2.6c.2.1.3.3.2.6z"/></svg>
+              WhatsApp
+            </a>
+            <a class="btn btn-ghost" id="cEmail" href="#">E-mail</a>
+          </div>
+          <p class="discreto">Atendimento entre irmãos, com discrição e sigilo.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p class="f-marca">VIAVERITASVITA</p>
+      <p>Via · Veritas · Vita</p>
+    </div>
+  </footer>
+
+  <script>
+    /* ---------- CONTATO ----------
+       O número e o e-mail ficam embaralhados (base64 do texto invertido)
+       e só são montados quando o irmão toca em "Mostrar contato".
+       Para trocar: btoa('novo-valor'.split('').reverse().join('')) */
+    const C_ = { w: 'NDQzMzc2NTk5NjY1NQ==', e: 'bW9jLmxpYW1nQG9obGlmb2RlbG90b2lyZWdvcg==' };
+    const des = (s) => atob(s).split('').reverse().join('');
+    const msg = 'Olá, Ir. Rogério! Vi a página da ViaVeritasVita e gostaria de conversar sobre um projeto para o meu Corpo.';
+    function revelar() {
+      const box = document.getElementById('contatos');
+      if (!box.hidden) return;
+      document.getElementById('cWhats').href = 'https://wa.me/' + des(C_.w) + '?text=' + encodeURIComponent(msg);
+      document.getElementById('cEmail').href = 'mailto:' + des(C_.e) + '?subject=' + encodeURIComponent('ViaVeritasVita');
+      box.hidden = false;
+      document.getElementById('btnRevelar').hidden = true;
+    }
+    document.querySelectorAll('[data-revelar]').forEach((b) => b.addEventListener('click', revelar));
+
+    // entrada suave das seções
+    const io = 'IntersectionObserver' in window
+      ? new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), { threshold: 0.12 })
+      : null;
+    document.querySelectorAll('.surge').forEach((el) => io ? io.observe(el) : el.classList.add('on'));
+  </script>
+</body>
+</html>
